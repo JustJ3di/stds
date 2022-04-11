@@ -36,7 +36,7 @@ string init(string str,int len){
 void upper(string str){
 
 
-    for (size_t i = 0; i < stdlen(str)+1; i++)
+    for (size_t i = 0; i < ((Std *)str -1)->size + 1; i++)
     {
         
         if (str[i] >= 97 && str[i] <= 122)
@@ -56,7 +56,7 @@ void upper(string str){
 void lower(string str){
 
 
-    for (size_t i = 0; i < stdlen(str)+1; i++)
+    for (size_t i = 0; i < ((Std *)str -1)->size; i++)
     {
         
         if (str[i] >= 65 && str[i] <= 90)
@@ -71,12 +71,31 @@ void lower(string str){
 
 }
 
+void reverse(string str){
+
+    char temp;
+    int size= (((Std *)str - 1)->size);
+
+    for (int i = 0; i < size/2; i++)  
+    {  
+    
+        temp = str[i];  
+        
+        str[i] = str[size - i - 1];  
+        
+        str[size - i - 1] = temp;  
+    
+    }  
+
+
+
+}
 
 
 
 int str_char(string src,char token){
 
-    for (size_t i = 0; i < ((Std*)src-1)->size; i++)
+    for (size_t i = 0; i < ((Std*)src-1)->size+1; i++)
     {
         if (src[i] == token )
         {
