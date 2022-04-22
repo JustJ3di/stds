@@ -58,7 +58,6 @@ void println(string);
 void lower(string);
 void upper(string);
 void reverse(string);
-Std **split(char);
 
 
 
