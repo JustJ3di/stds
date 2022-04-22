@@ -39,40 +39,15 @@ string init(string,int);
 
 
 //simple mystrlen
-static unsigned int mystrlen(string c){
-
-	int i = 0;
-
-	while(c[i]!='\0')i++;
-
-	return i;
-	
-}
+unsigned int mystrlen(string c);
 
 //copy string for use this function the user must build with init two string before.
-static void mystrcpy(string dst,string src,int size){
-
-	if (size == -1)size = mystrlen(src);
-
-	for (int i = 0; i < size; ++i)
-	{
-		
-		dst[i] = src[i];
-
-	}
-
-}
-
-
+void mystrcpy(string dst,string src,int size);
 
 
 //delete the string
-static void delstd(string old){
 
-	
-	free(((Std *)old-1));
-
-}
+void delstd(string old);
 
 unsigned int stdlen(const string);
 
@@ -82,6 +57,7 @@ int str_char(string src,char token);
 void println(string);
 void lower(string);
 void upper(string);
+void reverse(string);
 Std **split(char);
 
 

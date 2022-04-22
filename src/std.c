@@ -36,7 +36,7 @@ string init(string str,int len){
 void upper(string str){
 
 
-    for (size_t i = 0; i < ((Std *)str -1)->size + 1; i++)
+    for (int i = 0; i < ((Std *)str -1)->size + 1; i++)
     {
         
         if (str[i] >= 97 && str[i] <= 122)
@@ -56,10 +56,10 @@ void upper(string str){
 void lower(string str){
 
 
-    for (size_t i = 0; i < ((Std *)str -1)->size; i++)
+    for (int i = 0; i < ((Std *)str -1)->size+1; i++)
     {
         
-        if (str[i] >= 65 && str[i] <= 90)
+        if ((int)str[i] >= 65 && (int)str[i] <= 90)
         {
 
             str[i] = str[i] + 32;   
@@ -95,7 +95,7 @@ void reverse(string str){
 
 int str_char(string src,char token){
 
-    for (size_t i = 0; i < ((Std*)src-1)->size+1; i++)
+    for (int i = 0; i < ((Std*)src-1)->size+1; i++)
     {
         if (src[i] == token )
         {
@@ -114,7 +114,34 @@ void println(string str){
 
 }
 
+void delstd(string old){
 
+	free(((Std *)old-1));
+
+}
+
+unsigned int mystrlen(string c){
+
+	int i = 0;
+
+	while(c[i]!='\0')i++;
+
+	return i;
+	
+}
+
+void mystrcpy(string dst,string src,int size){
+
+	if (size == -1)size = mystrlen(src);
+
+	for (int i = 0; i < size; ++i)
+	{
+		
+		dst[i] = src[i];
+
+	}
+
+}
 
 
 unsigned int stdlen(const string str){
