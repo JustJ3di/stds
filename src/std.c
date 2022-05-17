@@ -9,7 +9,7 @@ string init(string str,int len){
 	if (len == -1)len = mystrlen(str);
 
 
-	Std *new = malloc(sizeof(Std)+ len + 1);
+	Std *new = malloc(sizeof(Std) + len + 1);
 
 	assert(new!=NULL);
 
@@ -123,8 +123,8 @@ void delstd(string old){
 unsigned int mystrlen(string c){
 
 	int i = 0;
-
-	while(c[i]!='\0')i++;
+	
+    while(c[i]!='\0')i++;
 
 	return i;
 	

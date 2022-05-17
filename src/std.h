@@ -26,31 +26,28 @@ typedef char *string;
 
 typedef struct std{
 
-
 	int size;
 
 	char str[];
 
-
 }Std;
 
-//build a string
+/*build a string*/
 string init(string,int);
 
 
-//simple mystrlen
+/*simple mystrlen*/
 unsigned int mystrlen(string c);
 
-//copy string for use this function the user must build with init two string before.
+/*copy string for use this function the user must build with init two string before.*/
 void mystrcpy(string dst,string src,int size);
 
 
-//delete the string
-
+/*delete the string*/
 void delstd(string old);
 
-unsigned int stdlen(const string);
 
+unsigned int stdlen(const string);
 
 int str_char(string src,char token);
 
