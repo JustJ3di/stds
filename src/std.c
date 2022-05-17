@@ -5,6 +5,7 @@
 
 
 string init(string str,int len){
+    
 
 	if (len == -1)len = mystrlen(str);
 
@@ -20,7 +21,6 @@ string init(string str,int len){
 	
 	new->size = len;
 
-	
 	
 	for (int i = 0; i < len+1  ; ++i)
 	{	
