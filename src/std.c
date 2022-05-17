@@ -11,7 +11,11 @@ string init(string str,int len){
 
 	Std *new = malloc(sizeof(Std) + len + 1);
 
-	assert(new!=NULL);
+	if (new == NULL)
+    {
+        fprintf(stderr, "out of memory\n");
+        exit(EXIT_FAILURE);
+    }
 
 	
 	new->size = len;
