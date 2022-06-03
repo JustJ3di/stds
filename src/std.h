@@ -24,13 +24,7 @@ In fact you can safely use that return pointer as a normal char * .
 
 typedef char *string;
 
-typedef struct std{
 
-	int size;
-
-	char str[];
-
-}Std;
 
 /*build a string*/
 string init(string,int);

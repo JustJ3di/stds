@@ -1,6 +1,12 @@
 #include"std.h"
 
+typedef struct std{
 
+	int size;
+
+	char str[];
+
+}Std;
 
 
 
